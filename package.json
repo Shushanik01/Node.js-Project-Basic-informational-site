@@ -21,6 +21,7 @@
   "homepage": "https://github.com/Shushanik01/Node.js-Project-Basic-informational-site#readme",
   "description": "",
   "dependencies": {
-    "ejs": "^6.0.1"
+    "ejs": "^6.0.1",
+    "mongoose": "^9.7.3"
   }
 }
