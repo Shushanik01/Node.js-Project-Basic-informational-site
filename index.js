@@ -17,11 +17,40 @@ try {
     console.log('Connected to DB');
 } catch (err) {
     console.log(err);
+};
+
+function getUserInfo(arg) {
+    return new Promise((resolve, reject) => {
+        let body = '';
+        arg.on('data', chunk => body += chunk);
+        arg.on('end', () => resolve(body));
+        arg.on('error', reject)
+    })
 }
 
-const server = createServer((req, res) => {
+const server = createServer(async(req, res) => {
 
     res.setHeader('Content-Type', 'Text/html');
+
+    if (req.method === 'POST' && req.url === '/submit') {
+        const body = await getUserInfo(req);
+        const params = new URLSearchParams(body);
+
+        try {
+            await User.create({
+                name: params.get('name'),
+                surname: params.get('surname'),
+                mail: params.get('mail')
+            })
+        } catch (err) {
+            console.log(err);
+
+        }
+        res.statusCode = 302;
+        res.setHeader('Location', '/contact-me');
+        res.end();
+        return
+    }
 
     let file = ''
 
