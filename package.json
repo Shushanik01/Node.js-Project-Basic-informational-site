@@ -1,0 +1,26 @@
+{
+  "name": "information-site",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shushanik01/Node.js-Project-Basic-informational-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shushanik01/Node.js-Project-Basic-informational-site/issues"
+  },
+  "homepage": "https://github.com/Shushanik01/Node.js-Project-Basic-informational-site#readme",
+  "description": "",
+  "dependencies": {
+    "ejs": "^6.0.1"
+  }
+}
