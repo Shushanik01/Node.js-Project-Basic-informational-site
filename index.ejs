@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
 </head>
+
 <body>
     <header>
         <nav>
@@ -16,6 +18,19 @@
     <main>
         <h1>Welcome to the Information Site</h1>
         <p>This is the homepage. Here you'll find information about who we are and how to get in touch.</p>
+        <form action="/submit" method="post">
+            <label for="name"> Enter your name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="surname"> Enter your surname</label>
+            <input type="text" id="surname" name="surname" required>
+
+            <label for="mail"> Enter you mail address</label>
+            <input type="text" id="mail" name="mail" required>
+
+            <button type="submit">Add</button>
+        </form>
     </main>
 </body>
+
 </html>
