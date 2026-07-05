@@ -10,8 +10,10 @@ const links = [
     { href: '/about', text: 'About' }
 ];
 
+const users = ["Rose", "Cake", "Biff"];
+
 app.get('/', (req, res) => {
-    res.render('index', { message: 'Shushanik rocks backend!', links: links })
+    res.render('index', { message: 'Shushanik rocks backend!', links: links, users:users })
 });
 
 let port = process.env.PORT || 3000
